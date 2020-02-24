@@ -38,36 +38,11 @@ The program uses tree structure to represent decision tree and implemented by my
 Figure1: ID3 algorithm.
 
 ### 2 Sample Split (DTNode.split())
-IF no sample:
-        Mark as leaf node.
-        Label as “no sample”.
-IF this is a leaf: (sub algorithm in next section)
-        Mark as leaf node.
-        Label as samples’ majority label.
-IF this path already analyzed all attributes:
-        Mark as leaf node.
-        Label as samples’ majority label.
-IF using “info gain” method:
-        Foreach attributes that haven’t been analyzed:
-                IF attribute is categorical:
-                        Calculate info gain
-                IF attribute is continuous:
-1.	Sort by attribute value:
-2.	Examine pairs of adjacent values with different targets
-3.	Chose mid-point that maximizes info gain
-        Select attribute with largest info gain, split sample into more child nodes.
-IF using “gini”:
-        Haven’t implemented.
+![algorithm 1](backup/img/alg21.png)
 
 
 ### 3 Verification of Leaf Node
-IF there is only one label in current sample:
-        RETURN True.
-ELSE: 
-        IF ratio of majority sample > prune:
-                REUTRN True.
-        ELSE:
-                RETURN False.
+![algorithm 2](backup/img/alg22.png)
 
 ### 4 Pre-Prune
 Use leaf verification function (DTNode.is_leaf()) to pre-prune the decision tree.

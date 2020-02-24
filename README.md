@@ -1,2 +1,2 @@
-# Decision-Trees
-Decision Trees Algorithm from Scratch
+# Decision Tree Algorithm
+Decision Trees Algorithm in Python
